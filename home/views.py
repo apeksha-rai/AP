@@ -355,13 +355,13 @@ from rest_framework.filters import OrderingFilter, SearchFilter
 
 # managed from router
 # ViewSets define the view behavior.
-class ItemViewSet(viewsets.ModelViewSet):
+class ProductViewSet(viewsets.ModelViewSet):
     queryset = Item.objects.all()
     serializer_class = ItemSerializers
 
 
 # needs a url to be managed
-class ItemListView(generics.ListAPIView):
+class ProductListView(generics.ListAPIView):
     queryset = Item.objects.all()
     serializer_class = ItemSerializers
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
