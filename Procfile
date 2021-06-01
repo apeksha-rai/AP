@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT PYCHARM PROJECT.wsgi:application
+web: waitress-serve --port=$PORT ap_EP.wsgi:application
